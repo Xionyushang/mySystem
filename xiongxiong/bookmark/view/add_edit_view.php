@@ -22,7 +22,7 @@ echo $button;
         </tr>
         <tr>
             <td width="15%" class="title_right">目的地連結:</td>
-            <td><input name="href" type="text" id="href" value="<?php echo $href; ?>" /></td>
+            <td><input name="url" type="text" id="url" value="<?php echo $url; ?>" /></td>
         </tr>
         <tr>
             <td width="15%" class="title_right">檔名:</td>

@@ -8,7 +8,7 @@ foreach ($db['data'] as $row) {
             <td>{$id}</td>
             <td>{$mark_name}</td>
             <td>{$sort}</td>
-            <td>{$href}</td>
+            <td>{$url}</td>
             <td>{$img}</td>
             <td>{$targets[$target]}</td>
         </tr>";

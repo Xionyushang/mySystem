@@ -16,9 +16,9 @@ switch ($get_data['op']) {
         $html->load_jquery_ui();
         $html->load_sweetalert2();
         $get_data['id'] = $_SESSION['user_id'];
-        $db = $user->read($get_data);
+        $dbUser = $user->read($get_data);
         $get_data['user_id'] = $_SESSION['user_id'];
-        $db_user_info = $user_info->read($get_data);
+        $dbUserInfo = $user_info->read($get_data);
         $dbPost=$post->read($get_data);
         include("./view/view.php");
         break;
@@ -31,29 +31,29 @@ switch ($get_data['op']) {
 
     case "create_save": //bio
         $html->head("新增簡介", "", "");
-        $db = $user_info->create_bio($get_data);
+        $dbUserInfo = $user_info->create_bio($get_data);
         $js->window_replace("./index.php?op=view");
         break;
 
     case "edit_save": //bio
         $html->head("修改簡介", "", "");
-        $db = $user_info->update_bio($get_data);
+        $dbUserInfo = $user_info->update_bio($get_data);
         $js->window_replace("./index.php?op=view");
         break;
 
     case "add_self_save": //user_info
         $html->head("新增儲存", "", "");
-        $db = $user_info->create_self($get_data);
+        $dbUserInfo = $user_info->create_self($get_data);
         $get_data['id'] = $get_data['user_id'];
-        $db = $user->update($get_data);
+        $dbUser = $user->update($get_data);
         $_SESSION['user_name'] = $get_data['user_name'];
         $js->window_replace("./index.php?op=view");
 
     case "edit_self_save": //user_info
         $html->head("修改儲存", "", "");
-        $db = $user_info->update_self($get_data);
+        $dbUserInfo = $user_info->update_self($get_data);
         $get_data['id'] = $get_data['user_id'];
-        $db = $user->update($get_data);
+        $dbUser = $user->update($get_data);
         $_SESSION['user_name'] = $get_data['user_name'];
         $js->window_replace("./index.php?op=view");
 }

@@ -20,22 +20,4 @@ class post {
 
         return $this->mysql->run($sql);
     }
-
-    function update($array) { //修改
-        extract($array);
-        $sql = "UPDATE {$this->table} SET 
-                mark_name=\"{$mark_name}\",
-                sort=\"{$sort}\",
-                href=\"{$href}\",
-                img=\"{$img}\",
-                target=\"{$target}\"
-
-				;";
-        return $this->mysql->run($sql);
-    }
-
-    function delete($id) {
-        $sql = "DELETE FROM {$this->table} WHERE ";
-        return $this->mysql->run($sql);
-    }
 }

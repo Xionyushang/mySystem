@@ -17,6 +17,10 @@ body {
 	text-align: left;
 }
 
+input{
+    border-radius: 5px;
+}
+
 body>footer {
     background-color: #007bff;
     color: white;
@@ -29,4 +33,3 @@ body>footer {
 footer p {
     margin: 0;
 }
-

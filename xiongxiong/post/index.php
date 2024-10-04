@@ -14,7 +14,7 @@ switch ($get_data['op']) {
     case "create_save":
         $html->head("新增儲存貼文", "", "");
         $db = $post->create($get_data);
-        $js->window_replace("./../main_right.php");
+        $js->window_replace("./../index.php");
         break;
 }
 $html->food('Y');

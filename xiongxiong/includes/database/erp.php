@@ -1,7 +1,7 @@
 <?php
 $sql_db=array();
-$sql_db['host']='your_host';
-$sql_db['dbuser']='your_user';
-$sql_db['dbpassword']='your_password';
-$sql_db['db_data_base']='your_data_base_name';
+$sql_db['host']='localhost';
+$sql_db['dbuser']='root';
+$sql_db['dbpassword']='123456';
+$sql_db['db_data_base']='system';
 ?>

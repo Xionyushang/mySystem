@@ -28,7 +28,7 @@ class bookmark {
         $sql = "INSERT INTO {$this->table} SET
                 mark_name=\"{$mark_name}\",
                 sort=\"{$sort}\",
-                href=\"{$href}\",
+                url=\"{$url}\",
                 img=\"{$img}\",
                 target=\"{$target}\"";
 
@@ -40,7 +40,7 @@ class bookmark {
         $sql = "UPDATE {$this->table} SET 
                 mark_name=\"{$mark_name}\",
                 sort=\"{$sort}\",
-                href=\"{$href}\",
+                url=\"{$url}\",
                 img=\"{$img}\",
                 target=\"{$target}\"
 

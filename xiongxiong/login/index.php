@@ -24,7 +24,7 @@ switch ($get_data['op']) {
             $_SESSION['user_name'] = $user_name;
             $_SESSION['login_date']=$now_date;
             $_SESSION['login_time']=$now_time;
-            $js->window_open("../../index.php", "_self", "");
+            $js->window_open("../index.php", "_self", "");
         } else {
             $js->window_open("index.php?op=login&type=false", "_self","");
         };

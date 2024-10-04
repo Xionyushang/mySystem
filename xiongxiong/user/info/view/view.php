@@ -1,8 +1,8 @@
 <?php
-foreach ($db['data'] as $row) {
+foreach ($dbUser['data'] as $row) {
     extract($row);
 }
-foreach ($db_user_info['data'] as $row) {
+foreach ($dbUserInfo['data'] as $row) {
     extract($row);
 }
 $bio_op = empty($bio) ? "create_save" : "edit_save";
